@@ -1,8 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
-from django.contrib.auth.decorators import login_required
+from .models import Book
+from .forms import BookForm
 
-# @login_required
 def show_hello(request):
     if(request.method == 'GET'):
         print('GETだぜ!!')
